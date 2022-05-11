@@ -24,7 +24,7 @@ exports.register = (req, res) => {
 
     //Destructure object
     const {first_name, last_name, email, password, confirm_password} = req.body;
-    
+
     const image = req.files.image[0]
     const imagepath = req.protocol + "://" + req.get("host") + "/public/images/" + image.filename
 
@@ -56,7 +56,8 @@ exports.register = (req, res) => {
                     first_name: first_name, 
                     last_name: last_name, 
                     email: email, 
-                    password: hashPassword
+                    password: hashPassword,
+                    image: imagepath
                 },
                 (err) => {
                     if(err){
