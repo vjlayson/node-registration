@@ -27,7 +27,6 @@ exports.register = (req, res) => {
 
     const image = req.files.image[0]
     const imagepath = req.protocol + "://" + req.get("host") + "/public/images/" + image.filename
-
     console.log(imagepath)
 
     // Validations
@@ -157,4 +156,3 @@ exports.deleteUser = (req, res) => {
         }
     )
 }
-

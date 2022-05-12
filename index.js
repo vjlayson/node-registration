@@ -1,17 +1,17 @@
-//import modules express, sql, dotenv
+//Import modules
 const express = require("express");
 const mysql = require("mysql2");
 const dotenv = require("dotenv");
 const path = require("path");
 
-// port 3000, host name: localhost
+//Assign port, host name
 const port = 3000;
 const hostName = "localhost";
 
-//create instance, save to variable app
+//Create instance, save to variable app
 const app = express();
 
-//make connection to database, save to db variable using mysql module
+//Make connection to database, save to db variable using mysql module
 dotenv.config({path: "./.env"})
 const db = mysql.createConnection({
     host: process.env.DATABASE_HOST,
